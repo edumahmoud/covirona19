@@ -17,6 +17,24 @@
         @media (max-width:1200px) {
             .main {display: none;}
             #notSupported {display: block;}
+            #notSupported .bog {
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 100px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+            #notSupported h3 {
+                color: #fff;
+                line-height: 100px;
+                text-align: center;
+            }
+
         }
     </style>
 </head>
@@ -415,7 +433,11 @@
     </script>
     <!--[تظهر هذه النافذة عندما يتم فتح الموقع من خلال الموبايل]-->
     <div id="notSupported" class="notSupported">
-        <h1 id="notSupportedMsg">الموقع غير مدعوم على هذا الجهاز</h1>
+        <h3>لو سمحت مش بالموبايل</h3>
+        <h3>فيه حاجه اسمها كمبيوتر ولابتوب</h3>
+        <div class="bog">
+            <img src="imgs/bog.png" width="300" alt="">
+        </div>
     </div>
     </body>
 </html>
