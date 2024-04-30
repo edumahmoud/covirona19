@@ -1,0 +1,148 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    /*background-image: linear-gradient(to bottom, #104e95, #FFFFFF);*/
+    background-color: #5ea37d/*rgb(10, 158, 84)*/;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.home .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: .4s;
+    /*border: 1px solid #000;*/
+}
+
+.home .header .logo {
+    /*border: 1px solid #000;*/
+    width: 35%;
+    text-align: center;
+    position: relative;
+    transition: .7s;
+}
+
+.home .header .logo span {
+    line-height: 200px;
+    font-size: 40px;
+    font-family: Changa, Courier, monospace;
+    color: #ffffff;
+    position: relative;
+    cursor: pointer;
+}
+
+.home .header .logo img {
+    position: relative;
+    top: 10px;
+}
+
+.home .header .list {
+    /*border: 1px solid #000;*/
+    width: calc(100% - 35%);
+}
+
+.home .header .list ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /*border: 1px solid #000;*/
+    position: relative;
+    top: 50%;
+    transform: translate(-18%, -10%);
+}
+
+.home .header .list ul li {
+    margin-right: 30px;
+}
+
+.home .header .list ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-family: Amiri;
+    padding: 5px 10px;
+    transition: .3s;
+    border-radius: 0 10px;
+}
+
+.home .header .list ul li a:hover {
+    background-color: #0e483e;
+}
+
+.home .header .list ul .active {
+    background-color: #0e483e;
+}
+
+.home .home-main {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+    top: 170px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.home .home-main .text {
+    width: 60%;
+    padding: 10px;
+}
+
+.home .home-main .text h1 {
+    font-family: cairo;
+    color: #FFFFFF;
+    border-bottom: 4px solid #FFF;
+    margin-right: 30px;
+}
+
+.home .home-main .text p {
+    color: #FFF;
+    font-size: 20px;
+    padding: 10px 40px;
+    font-family: cairo;
+    font-stretch: expanded;
+}
+
+.home .home-main .img {
+    width: 40%;
+    text-align: center;
+}
+
+.home .home-main .img span {
+    width: 30%;
+    color: #FFFFFF;
+    font-size: 120px;
+    font-family: Cairo;
+    opacity: .1;
+    position: relative;
+    top: 22%;
+}
+
+.article .tit {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 250px;
+    background-image: url('../imgs/bgbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.article h1 {
+    color: #0e0f0f;
+    text-align: center;
+    font-family: Changa;
+    font-size: 50px;
+    line-height: 250px;
+}
