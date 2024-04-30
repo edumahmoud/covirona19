@@ -51,7 +51,7 @@ let screenCov = document.getElementById('screen-cover');
         },1000)
     })
 
-
+/*
     // دالة ما اذا كان الموقع مدعوم لدى الجهاز ام لا
     function nSupport() {
         const win = window.innerWidth; // تحديد عرض الشاشة
@@ -66,3 +66,4 @@ let screenCov = document.getElementById('screen-cover');
 
     // استدعاء الدالة بشكل متكرر كل 100 مللي ثانية لتنفيذ اظهار او اخفاء رسالة الدعم
     setInterval(nSupport, 100);
+*/
