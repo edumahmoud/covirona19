@@ -70,12 +70,3 @@ table tr td:first-child {
     font-weight: bolder;
     color: black;
 }
-
-table::after {
-    content: 'الأرقام المعروضه وهمية للتجربة فقط';
-    padding: 10px;
-    background-color: #e2f3f0;
-    color: #06414a;
-    font-family: Changa;
-    position: absolute;
-}
