@@ -77,4 +77,5 @@ table::after {
     background-color: #e2f3f0;
     color: #06414a;
     font-family: Changa;
+    position: absolute;
 }
