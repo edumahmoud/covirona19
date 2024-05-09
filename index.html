@@ -15,6 +15,34 @@
     <link rel="icon" href="imgs/covid.png">
     <title>COVID-19 | فيروس كورونا</title>
     <style>
+        .f-img {
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            z-index: 10005;
+            animation: covido 3s ease-in-out infinite;
+        }
+        .f-img img {
+            width: 80px;
+        }
+        @keyframes covido {
+            0% {
+                top: 40%;
+            }
+            50% {
+                top: 60%;
+            }
+            50% {
+                top: 60%;
+            }
+            100% {
+                top: 40%;
+            }
+        }
+
         @media (max-width:1250px) {
             .main {display: none;}
             #notSupported {display: block;}
@@ -414,6 +442,12 @@
             <div class="totop" id="totop">
                 <img src="imgs/icons/totop-arrow.svg" alt="">
             </div>
+            
+        <!-- Float image -->
+        <div class="f-img">
+            <img src="imgs/covid.png" alt="">
+        </div>
+
 
         </container>
         <!-- نهاية الصفحة -->
