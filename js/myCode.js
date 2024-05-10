@@ -25,7 +25,7 @@ var header      = document.querySelector('.header'),
         }
 
         // View Corona virus from the left side
-        if (window.scrollY >= 500) {
+        if (window.scrollY >= 300) {
             floatImg.style.left = "50px";
             floatImg.style.transform = "rotate(0deg)";
         }else {            
@@ -61,28 +61,11 @@ let welSquare = document.getElementById('wel');
 let screenCov = document.getElementById('screen-cover');
 
 
-    // تنفيذ اخفاء رسالة الترحيب بالضغط على الزر المرفق
-    closeWel.addEventListener('click', function () {
-        welSquare.style.top = '-1000px';
-        screenCov.style.opacity = '0';
-        setInterval(function(){
-            screenCov.style.display = 'none';
-        },1000)
-    })
-
-/*
-    // دالة ما اذا كان الموقع مدعوم لدى الجهاز ام لا
-    function nSupport() {
-        const win = window.innerWidth; // تحديد عرض الشاشة
-        const nsmCover = document.getElementById('notSupported');
-        
-        if (win < 1200) {
-            nsmCover.style.display = 'block'; // إخفاء العنصر
-        } else {
-            nsmCover.style.display = 'none'; // عرض العنصر
-        }
-    }
-
-    // استدعاء الدالة بشكل متكرر كل 100 مللي ثانية لتنفيذ اظهار او اخفاء رسالة الدعم
-    setInterval(nSupport, 100);
-*/
+// تنفيذ اخفاء رسالة الترحيب بالضغط على الزر المرفق
+closeWel.addEventListener('click', function () {
+    welSquare.style.top = '-1000px';
+    screenCov.style.opacity = '0';
+    setInterval(function(){
+        screenCov.style.display = 'none';
+    },1000)
+})
