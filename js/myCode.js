@@ -34,7 +34,7 @@ var header      = document.querySelector('.header'),
         }
 
         
-        // View creators
+        // View and hide creators
         if (window.scrollY >= 2900) {
             cAll.style.opacity = "1";
         }else {            
