@@ -41,13 +41,8 @@ body, .main {
     top: 0;
     left: 0;
     z-index: 100003;
-    background-color: red;
+    background-color: #FFF;
     display: none;
-}
-#notSupported h1 {
-    color: #FFF;
-    line-height: 50vh;
-    text-align: center;
 }
 
 /*------- Welcome msg and define the site --------*/
