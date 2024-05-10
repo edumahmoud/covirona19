@@ -20,7 +20,6 @@
             height: 80px;
             position: fixed;
             top: 50%;
-            left: -250px;
             transform: translateY(-50%);
             z-index: 1005;
             animation: covido 3s linear infinite;
@@ -29,6 +28,24 @@
         }
         .f-img img {
             width: 80px;
+        }
+        .f-img::before {
+            content: 'اوعى الفيروس يا عم الحاج';
+            position: fixed;
+            top: -50px;
+            left: 100px;
+            padding: 5px;
+            color: #FFF;
+            font-size: 21px;
+            border-radius: 5px;
+            background-color: red;
+            filter: drop-shadow(0 0 0 #000);
+            opacity: 0;
+            text-align: center;
+            transition: .5s;
+        }
+        .f-img:hover::before {
+            opacity: 1;
         }
         @keyframes covido {
             0% {
@@ -72,38 +89,46 @@
             opacity: 0;
             transition: 4s;
         }
-        @media (max-width:1250px) {
-            
-            .main {
-                display: none;
-            }
-        
-            #notSupported {
-                display: block;
-            }
-        
-            #notSupported .bog {
-                width: 100%;
-                height: auto;
-                position: fixed;
-                bottom: 10%;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: center;
-                align-items: center;
-            }
-        
-            #notSupported h2 {
-                color: #79a6e9;
-                line-height: 100px;
-                text-align: center;
-                text-shadow: 0 0 15px #79a6e9;
-                font-family: cairo;
-            }
-        
-        }
+@media (max-width:1250px) {
+    
+    .main {
+        display: none;
+    }
+
+    #notSupported {
+        display: block;
+    }
+
+    .notSupp {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .unSupportMsg,
+    .unSupportImg {
+        padding: 20px;
+    }
+    
+    .unSupportMsg {
+        text-align: center;
+    }
+    .unSupportMsg h2 {
+        color: #4877ad;
+        text-shadow: 0 0 10px #86aedc;
+        font-family: Cairo;
+    }
+    .unSupportImg {
+        width: fit-content;
+    }
+    .unSupportImg img {
+        width: 400px;
+    }
+
+}
     </style>
 </head>
     <body>
@@ -494,16 +519,23 @@
         <!-- نهاية الصفحة -->
 
 
-    <!--[ استدعاء ملف أكواد جافاسكريبت ]-->
-    <script src="js/myCode.js"></script>
+        <!--[ استدعاء ملف أكواد جافاسكريبت ]-->
+        <script src="js/myCode.js"></script>
 
-    <!--[تظهر هذه النافذة عندما يتم فتح الموقع من خلال الموبايل]-->
-    <div id="notSupported" class="notSupported">
-        <h2>عذراً</h2>
-        <h2>الموقع غير مدعوم على الشاشات الصغيرة</h2>
-        <div class="bog">
-            <img src="imgs/notSupported2.png" width="400" alt="">
+        <!--[تظهر هذه النافذة عندما يتم فتح الموقع من خلال الموبايل]-->
+        <div id="notSupported" class="notSupported">
+            
+            <div class="notSupp">
+                <div class="unSupportMsg">
+                    <h2>عذراً</h2>
+                    <h2>الموقع غير مدعوم على الشاشات الصغيرة</h2>
+                </div>
+                
+                <div class="unSupportImg">
+                    <img src="imgs/notSupported2.png" alt="">
+                </div>
+            </div>
+            
         </div>
-    </div>
     </body>
 </html>
