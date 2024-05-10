@@ -73,13 +73,20 @@
             transition: 4s;
         }
         @media (max-width:1250px) {
-            .main {display: none;}
-            #notSupported {display: block;}
+            
+            .main {
+                display: none;
+            }
+        
+            #notSupported {
+                display: block;
+            }
+        
             #notSupported .bog {
                 width: 100%;
                 height: auto;
                 position: fixed;
-                top: 100px;
+                bottom: 10%;
                 right: 0;
                 display: flex;
                 flex-direction: column;
@@ -87,12 +94,15 @@
                 justify-content: center;
                 align-items: center;
             }
-            #notSupported h3 {
-                color: #fff;
+        
+            #notSupported h2 {
+                color: #79a6e9;
                 line-height: 100px;
                 text-align: center;
+                text-shadow: 0 0 15px #79a6e9;
+                font-family: cairo;
             }
-
+        
         }
     </style>
 </head>
@@ -489,10 +499,10 @@
 
     <!--[تظهر هذه النافذة عندما يتم فتح الموقع من خلال الموبايل]-->
     <div id="notSupported" class="notSupported">
-        <h3>لو سمحت مش بالموبايل</h3>
-        <h3>فيه حاجه اسمها كمبيوتر ولابتوب</h3>
+        <h2>عذراً</h2>
+        <h2>الموقع غير مدعوم على الشاشات الصغيرة</h2>
         <div class="bog">
-            <img src="imgs/bog.png" width="300" alt="">
+            <img src="imgs/notSupported2.png" width="400" alt="">
         </div>
     </div>
     </body>
