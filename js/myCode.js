@@ -3,6 +3,8 @@ var header      = document.querySelector('.header'),
     logo        = document.querySelector('.logo'),
     listItem    = document.querySelectorAll('.list ul li'),
     totopBtn    = document.querySelector('.totop'),
+    floatImg = document.getElementById('floatImg'),
+    cAll = document.getElementById('c-all'),
     scroll      = 30,
     secHiehgt   = 600;
 
@@ -20,6 +22,23 @@ var header      = document.querySelector('.header'),
             header.style.height = '200px';
             header.style.boxShadow = 'none';
             logo.style.top = '0'
+        }
+
+        // View Corona virus from the left side
+        if (window.scrollY >= 500) {
+            floatImg.style.left = "50px";
+            floatImg.style.transform = "rotate(0deg)";
+        }else {            
+            floatImg.style.left = "-250px";
+            floatImg.style.transform = "rotate(180deg)";
+        }
+
+        
+        // View creators
+        if (window.scrollY >= 2900) {
+            cAll.style.opacity = "1";
+        }else {            
+            cAll.style.opacity = "0";
         }
 
         // Scroll To-Top Button
