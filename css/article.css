@@ -5,8 +5,7 @@
 }
 
 .home {
-    /*background-image: linear-gradient(to bottom, #104e95, #FFFFFF);*/
-    background-color: #5ea37d/*rgb(10, 158, 84)*/;
+    background-color: #5ea37d;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -21,11 +20,9 @@
     top: 0;
     z-index: 999;
     transition: .4s;
-    /*border: 1px solid #000;*/
 }
 
 .home .header .logo {
-    /*border: 1px solid #000;*/
     width: 35%;
     text-align: center;
     position: relative;
@@ -47,7 +44,6 @@
 }
 
 .home .header .list {
-    /*border: 1px solid #000;*/
     width: calc(100% - 35%);
 }
 
@@ -55,7 +51,6 @@
     display: flex;
     flex-direction: row;
     list-style: none;
-    /*border: 1px solid #000;*/
     position: relative;
     top: 50%;
     transform: translate(-18%, -10%);
