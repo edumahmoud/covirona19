@@ -505,22 +505,22 @@
             
         </div>
         <script>
-            let articleText = document.getElementsByClassName('articleText');
-            let hText       = document.getElementsByClassName('hText');
+            let articleText = document.getElementsByClassName('articleText')[0];
+            let hText       = document.getElementsByClassName('hText')[0];
             let hTextInner  = hText.textContent;
 
-            
             hText.addEventListener("click", function(){
-                if(articleText.style.height === "90px"){
+                let currentHeight = window.getComputedStyle(articleText).height;
+
+                if (currentHeight === "90px") {
                     articleText.style.height = "300px";
-                    hTextInner = "عرض أقل";
-                }else{
+                    hText.textContent = "عرض أقل";
+                } else {
                     articleText.style.height = "90px";
-                    hTextInner = "عرض المزيد";
+                    hText.textContent = "عرض المزيد";
                 }
-            })
-            
-            
+            });
+
         </script>
     </body>
 </html>
