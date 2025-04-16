@@ -501,14 +501,13 @@
             
         </div>
         <script>
-            let articleText = document.getElementsByClassName('articleText'),
-                hText       = document.getElementsByClassName('hText'),
-                hTextInner = hText.textContent;
+            let articleText = document.getElementsByClassName('articleText');
+            let hText       = document.getElementsByClassName('hText');
+            let hTextInner  = hText.textContent;
 
-            hText.addEventListener("onclick", function(){
-                let currentHeight = window.getComputedStyle(articleText).height;
-                
-                if(currentHeight.style.height === "90px"){
+
+            hText.onClick(function(){
+                if(articleText.style.height === "90px"){
                     articleText.style.height = "300px";
                     hTextInner = "عرض أقل";
                 }else{
