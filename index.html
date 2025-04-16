@@ -145,6 +145,10 @@
         font-size: 22px;
         cursor: pointer;
         margin-right: 50px;
+        transition: .2s;
+    }
+    .hText:hover {
+        color: #4877ad;
     }
     </style>
 </head>
@@ -505,8 +509,8 @@
             let hText       = document.getElementsByClassName('hText');
             let hTextInner  = hText.textContent;
 
-
-            hText.onClick(function(){
+            
+            hText.addEventListener("click", function(){
                 if(articleText.style.height === "90px"){
                     articleText.style.height = "300px";
                     hTextInner = "عرض أقل";
