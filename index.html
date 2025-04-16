@@ -144,6 +144,7 @@
         font-family: 'Courier New', Courier, monospace;
         font-size: 22px;
         cursor: pointer;
+        margin-right: 50px;
     }
     </style>
 </head>
@@ -501,17 +502,21 @@
         </div>
         <script>
             let articleText = document.getElementsByClassName('articleText'),
-                hText       = document.getElementsByClassName('hText');
-            
-            hText.addEventListener('onclick', function (){
+                hText       = document.getElementsByClassName('hText'),
+                hTextInner = hText.textContent;
+
+            hText.addEventListener("onclick", function(){
                 let currentHeight = window.getComputedStyle(articleText).height;
                 
                 if(currentHeight.style.height === "90px"){
                     articleText.style.height = "auto";
-                }else {
-                    articleText.style.height = "0px";
+                    hTextInner = "عرض أقل";
+                }else{
+                    articleText.style.height = "auto";
+                    hTextInner = "عرض المزيد";
                 }
             })
+            
             
         </script>
     </body>
