@@ -136,13 +136,14 @@
 
 }
     .articleText {
-        height: 100px;
+        height: 90px;
         overflow-y: hidden;
     }
     .hText {
         color: #f0ecec;
         font-family: 'Courier New', Courier, monospace;
         font-size: 22px;
+        cursor: pointer;
     }
     </style>
 </head>
@@ -503,10 +504,12 @@
                 hText       = document.getElementsByClassName('hText');
             
             hText.addEventListener('onclick', function (){
-                if(articleText.style.height === "200px"){
+                let currentHeight = window.getComputedStyle(articleText).height;
+                
+                if(currentHeight.style.height === "90px"){
                     articleText.style.height = "auto";
                 }else {
-                    articleText.style.height = "200px";
+                    articleText.style.height = "0px";
                 }
             })
             
