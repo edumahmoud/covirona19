@@ -135,6 +135,10 @@
     }
 
 }
+    .articleText {
+        height: 200px;
+        overflow-y: hidden;
+    }
     </style>
 </head>
     <body>
@@ -178,10 +182,10 @@
                 <article class="home-main">
                     <div class="text">
                         <h1>فيروس كورونا (كوفيد-19)</h1>
-                        <p>
+                        <p class="articleText">
                         عندما ظهر فيروس كورونا المستجد لأول مرة في ديسمبر 2019 في مدينة ووهان بالصين، لم يكن أحد يتوقع الأثر الكبير الذي سيخلفه على العالم بأسره. بدأت هذه الجائحة بالانتشار بشكل سريع وواسع، مما أدى إلى تغيير جذري في حياة البشرية وتأثيراتها على جميع الجوانب الاقتصادية والاجتماعية والصحية. يعد فيروس كورونا تحديًا عالميًا لم يسبق له مثيل في العصر الحديث، مما دفع العلماء والباحثين والمجتمعات العالمية للبحث عن حلول فعالة للتصدي لهذا الوباء والحد من انتشاره. في هذا المقال، سنلقي نظرة عامة على ما هو فيروس كورونا، كيف انتشر، والتدابير التي اتخذت لمواجهته، بالإضافة إلى تأثيره على الصحة العامة والاقتصاد العالمي.
-                        <span class="hText">عرض المزيد</span>
                         </p>
+                        <span class="hText">عرض المزيد</span>
                     </div>
                     <div class="img">
                         <span><b>COVID-19</b></span>
@@ -489,5 +493,18 @@
             </div>
             
         </div>
+        <script>
+            let articleText = document.getElementsByClassName('articleText'),
+                hText       = document.getElementsByClassName('hText');
+            
+            hText.addEventListener('onclick', function (){
+                if(this.style.height === "200px"){
+                    articleText.style.height = "auto";
+                }else {
+                    articleText.style.height = "200px";
+                }
+            })
+            
+        </script>
     </body>
 </html>
